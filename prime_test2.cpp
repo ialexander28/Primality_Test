@@ -3,8 +3,8 @@
 bool isPrime(int num) {
 
     int countDivs; 
-    countDivs = 0; 
-    for(int i=1; i <= num/2; i++){  //num is divided by 2 to become num/2, which reduces the need to determine the amount of 'countDivs' to 1 unit
+    countDivs = 0;                  // Determines how many true divisors can evenly divide into num, i.e. the equation has to satisfy: num mod i = 0 or num % i == 0
+    for(int i=1; i <= num/2; i++){  // num is divided by 2 to become num/2, which reduces the need to determine the amount of 'countDivs' to 1 unit
         if(num % i == 0)
             countDivs++;
     }
